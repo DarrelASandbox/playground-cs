@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace harsha_vardhan
+namespace _01_WhatIsYourName
 {
   class Program
   {
