@@ -4,6 +4,9 @@ class Program
 {
   static void Main()
   {
+    // local constant
+    const string developerName = "Harsha";
+
     // create reference variables
     Product p1, p2, p3;
 
@@ -33,7 +36,9 @@ class Program
     p3.cost = 400;
     p3.quantityInStock = 800;
 
-    Console.WriteLine("-------------------- p1 --------------------:");
+    Console.WriteLine("developerName: " + developerName);
+
+    Console.WriteLine("\n-------------------- p1 --------------------:");
     Console.WriteLine("productID: " + p1.productID);
     Console.WriteLine("productName: " + p1.productName);
     Console.WriteLine("cost: " + p1.cost);

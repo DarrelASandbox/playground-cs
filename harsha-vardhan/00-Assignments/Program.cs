@@ -17,6 +17,10 @@ namespace _00_Assignments
       ac.PatternPrinting();
       Console.ReadKey();
       Console.Clear();
+
+      ac.MultipleObjectsExample();
+      Console.ReadKey();
+      Console.Clear();
     }
   }
 }
