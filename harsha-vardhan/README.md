@@ -47,3 +47,21 @@ dotnet clean
 ---
 
 &nbsp;
+
+> **indie:** Is it safe to use static field without singleton pattern?
+> Singleton guarantee only one object access static field at given time.
+
+> **Web University:** This question can't be generalized.
+> It depends on type of app (desktop or web) that you are developing and the framework being used to make it.
+>
+> For example:
+>
+> In desktop apps: Either of static filed or singleton pattern would be fine.
+>
+> In web apps: Static fields are not recommended as the app runs on client / server (request / response) model. Alternatively, singleton with dependency injection is recommended there.
+
+&nbsp;
+
+---
+
+&nbsp;
