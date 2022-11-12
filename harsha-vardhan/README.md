@@ -40,6 +40,7 @@ dotnet clean
 ```
 
 - [What is the difference between a namespace, a class, an object and an instance?](https://stackoverflow.com/questions/819793/what-is-the-difference-between-a-namespace-a-class-an-object-and-an-instance)
+- [What's the main difference between int.Parse() and Convert.ToInt32](https://stackoverflow.com/questions/199470/whats-the-main-difference-between-int-parse-and-convert-toint32)
 
 &nbsp;
 

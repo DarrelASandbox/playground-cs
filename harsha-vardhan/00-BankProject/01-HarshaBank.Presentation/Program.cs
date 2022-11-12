@@ -39,16 +39,11 @@ namespace _01_HarshaBank.Presentation
 
           switch (mainMenuChoice)
           {
-            case 1: // @TODO: Display Customers Menu
-              break;
-            case 2: // @TODO: Display Accounts Menu
-              break;
-            case 3: // @TODO: Display Funds Transfer Menu
-              break;
-            case 4: // @TODO: Display Funds Transfer Statement Menu
-              break;
-            case 5: // @TODO: Display Account Statement Menu
-              break;
+            case 1: CustomersMenu(); break;
+            case 2: AccountsMenu(); break;
+            case 3: FundsTransferMenu(); break;
+            case 4: FundsTransferStatementMenu(); break;
+            case 5: AccountStatementMenu(); break;
           }
         } while (mainMenuChoice != 0);
       }
@@ -58,5 +53,42 @@ namespace _01_HarshaBank.Presentation
       Console.ReadKey();
       Console.Clear();
     }
+    static void CustomersMenu()
+    {
+      int customerMenuChoice = -1;
+
+      do
+      {
+        Console.WriteLine("\n:::Customers Menu:::");
+        Console.WriteLine("1. Add Customer");
+        Console.WriteLine("2. Delete Customer");
+        Console.WriteLine("3. Update Customer");
+        Console.WriteLine("4. View Customers");
+        Console.WriteLine("0. Back to Main Menu");
+
+        Console.WriteLine("Enter choice:");
+        customerMenuChoice = Convert.ToInt32(Console.ReadLine());
+      } while (customerMenuChoice != 0);
+    }
+    static void AccountsMenu()
+    {
+      int accountMenuChoice = -1;
+
+      do
+      {
+        Console.WriteLine("\n:::Accounts Menu:::");
+        Console.WriteLine("1. Add Account");
+        Console.WriteLine("2. Delete Account");
+        Console.WriteLine("3. Update Account");
+        Console.WriteLine("4. View Accounts");
+        Console.WriteLine("0. Back to Main Menu");
+
+        Console.WriteLine("Enter choice:");
+        accountMenuChoice = Convert.ToInt32(Console.ReadLine());
+      } while (accountMenuChoice != 0);
+    }
+    static void FundsTransferMenu() { }
+    static void FundsTransferStatementMenu() { }
+    static void AccountStatementMenu() { }
   }
 }
