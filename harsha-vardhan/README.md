@@ -21,11 +21,17 @@
 
 ## Introduction
 
+- [For Homebrew: GitHub - isen-ng/homebrew-dotnet-sdk-versions](https://github.com/isen-ng/homebrew-dotnet-sdk-versions)
 - [What is the difference between a namespace, a class, an object and an instance?](https://stackoverflow.com/questions/819793/what-is-the-difference-between-a-namespace-a-class-an-object-and-an-instance)
 
 ```sh
 dotnet new console --framework net5.0
 dotnet run
+# Mac ARM64 for .NET 5
+dotnetx64 run
+
+# clean solution
+dotnet clean
 ```
 
 &nbsp;

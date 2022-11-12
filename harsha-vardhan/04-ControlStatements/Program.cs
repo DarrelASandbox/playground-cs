@@ -20,29 +20,29 @@ namespace _04_ControlStatements
       Console.ReadKey();
       Console.Clear();
 
-      int monthnumber = 7;
-      string monthname;
+      int monthNumber = 7;
+      string monthName;
 
-      Console.WriteLine("monthnumber = " + 7);
+      Console.WriteLine("monthNumber = " + 7);
 
-      // check the value of monthnumber whether it matches with any one of the following cases
-      switch (monthnumber)
+      // check the value of monthNumber whether it matches with any one of the following cases
+      switch (monthNumber)
       {
-        case 1: monthname = "Jan"; break;
-        case 2: monthname = "Feb"; break;
-        case 3: monthname = "Mar"; break;
-        case 4: monthname = "Apr"; break;
-        case 5: monthname = "May"; break;
-        case 6: monthname = "Jun"; break;
-        case 7: monthname = "Jul"; break;
-        case 8: monthname = "Aug"; break;
-        case 9: monthname = "Sep"; break;
-        case 10: monthname = "Oct"; break;
-        case 11: monthname = "Nov"; break;
-        case 12: monthname = "Dec"; break;
-        default: monthname = "unknown"; break;
+        case 1: monthName = "Jan"; break;
+        case 2: monthName = "Feb"; break;
+        case 3: monthName = "Mar"; break;
+        case 4: monthName = "Apr"; break;
+        case 5: monthName = "May"; break;
+        case 6: monthName = "Jun"; break;
+        case 7: monthName = "Jul"; break;
+        case 8: monthName = "Aug"; break;
+        case 9: monthName = "Sep"; break;
+        case 10: monthName = "Oct"; break;
+        case 11: monthName = "Nov"; break;
+        case 12: monthName = "Dec"; break;
+        default: monthName = "unknown"; break;
       }
-      Console.WriteLine("monthname: " + monthname); // Output: Jul
+      Console.WriteLine("monthName: " + monthName); // Output: Jul
       Console.ReadKey();
       Console.Clear();
 
@@ -52,7 +52,7 @@ namespace _04_ControlStatements
       while (i <= 10)
       {
         Console.WriteLine(i);
-        i++; // incrementation
+        i++;
       }
       Console.ReadKey();
       Console.Clear();
@@ -61,7 +61,7 @@ namespace _04_ControlStatements
       {
         Console.WriteLine("do while:");
         Console.WriteLine("i: " + i);
-        i++; // incrementation
+        i++;
       } while (i <= 10);
       Console.ReadKey();
       Console.Clear();
@@ -74,20 +74,32 @@ namespace _04_ControlStatements
       Console.ReadKey();
       Console.Clear();
 
+      System.Console.WriteLine("skip \"6\" and go to \"7\":");
+      for (int k = 1; k <= 10; k++)
+      {
+        if (k == 6)
+          continue;
+        System.Console.WriteLine(k);
+      }
+      System.Console.ReadKey();
+      Console.Clear();
+
+      System.Console.WriteLine("goto myLabel:");
       Console.WriteLine("one");
       Console.WriteLine("two");
 
-      // jump to mylabel
-      goto mylabel;
+      // jump to myLabel
+      goto myLabel;
       Console.WriteLine("three");
       Console.WriteLine("four");
       Console.WriteLine("five");
 
-    // mylabel starts here
-    mylabel:
+    // myLabel starts here
+    myLabel:
       Console.WriteLine("six");
       Console.WriteLine("seven");
       Console.ReadKey();
+      Console.Clear();
     }
   }
 }
