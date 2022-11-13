@@ -6,13 +6,19 @@
   private int quantityInStock;
   public static int TotalNoProducts;
 
-  public void CalculateTax()
+  public void CalculateTax(double percentage = 12.5)
   {
     double t;
-
     if (cost <= 20000) t = cost * 10 / 100;
-    else t = cost * 12.5 / 100;
+    else t = cost * percentage / 100;
+    tax = t;
+  }
 
+  public void CalculateTax(double cost, double percentage = 12.5)
+  {
+    double t;
+    if (cost <= 30000) t = cost * 20 / 100;
+    else t = cost * percentage / 100;
     tax = t;
   }
 
