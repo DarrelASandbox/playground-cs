@@ -1,8 +1,8 @@
 ﻿public class Product
 {
-  public int productID;
-  public double cost;
-  public double tax;
+  private int productID;
+  private double cost;
+  private double tax;
 
   public void CalculateTax()
   {
