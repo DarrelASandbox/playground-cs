@@ -14,11 +14,13 @@ namespace _06_Methods
 
       p1.SetProductID(1001);
       p1.SetCost(1000);
+      p1.CalculateTax();
+      p1.SetQuantityInStock(4500);
+
       p2.SetProductID(1002);
       p2.SetCost(30_000);
-
-      p1.CalculateTax();
       p2.CalculateTax();
+      p2.SetQuantityInStock(400);
 
       Console.WriteLine("-------------------- p1 --------------------:");
       Console.WriteLine("productID: " + p1.GetProductID());
@@ -30,7 +32,8 @@ namespace _06_Methods
       Console.WriteLine("cost: " + p2.GetCost());
       Console.WriteLine("CalculateTax: " + p2.GetTax());
 
-      Console.WriteLine("\nTotalNoProducts: " + Product.GetTotalNoOfProducts());
+      Console.WriteLine("\nTotal quantityInStock: " + Product.GetTotalQuantity(p1, p2));
+      Console.WriteLine("TotalNoProducts: " + Product.GetTotalNoOfProducts());
     }
   }
 }
