@@ -14,8 +14,28 @@
     tax = t;
   }
 
-  public void CalculateTax(double cost, double percentage = 12.5)
+  public void CalculateTax(double cost, double percentage)
   {
+    double t;
+    if (cost <= 30000) t = cost * 20 / 100;
+    else t = cost * percentage / 100;
+    System.Console.WriteLine("t" + t);
+    tax = t;
+  }
+
+  // For Parameter Modifiers
+  public void CalculateTaxPMDefault(double percentage)
+  {
+    percentage = 5;
+    double t;
+    if (cost <= 30000) t = cost * 20 / 100;
+    else t = cost * percentage / 100;
+    tax = t;
+  }
+
+  public void CalculateTaxPMRef(ref double percentage)
+  {
+    percentage = 5;
     double t;
     if (cost <= 30000) t = cost * 20 / 100;
     else t = cost * percentage / 100;
