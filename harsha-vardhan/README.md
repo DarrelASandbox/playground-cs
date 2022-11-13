@@ -82,3 +82,28 @@ dotnet clean
 ---
 
 &nbsp;
+
+> **Javier:** dot and comma in type conversion
+> My question is about type conversion. I was wondering if the type conversion will take into account the national characters used as decimal point and as thousand separator. As you know this characters differs in several countries around the world. Thank you
+
+> **Web University:**
+>
+> Natural languages (with specific to a country) is recognised as Culture in .net.
+> The default culture is "InvariantCulture" (no specific language).
+> You can set your specific culture as follows:
+
+```c#
+    using System.Globalization;
+
+    CultureInfo ci = new CultureInfo("en-US");
+    Thread.CurrentThread.CurrentCulture = ci;
+    Thread.CurrentThread.CurrentUICulture = ci;
+```
+
+> Ref: [StackOverflow](https://stackoverflow.com/questions/13354211/how-to-set-default-culture-info-for-entire-c-sharp-application) & [Phrase Blog](https://phrase.com/blog/posts/all-you-need-to-know-about-cultureinfo-in-net-applications/)
+
+&nbsp;
+
+---
+
+&nbsp;

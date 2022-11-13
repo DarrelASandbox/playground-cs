@@ -25,6 +25,10 @@ namespace _00_Assignments
       ac.NumberClass();
       Console.ReadKey();
       Console.Clear();
+
+      ac.TypeConversion();
+      Console.ReadKey();
+      Console.Clear();
     }
   }
 }
