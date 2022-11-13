@@ -3,6 +3,7 @@
   private int productID;
   private double cost;
   private double tax;
+  public static int TotalNoProducts;
 
   public void CalculateTax()
   {
@@ -20,6 +21,8 @@
   public double GetCost() { return cost; }
   public void SetTax(double value) { tax = value; }
   public double GetTax() { return tax; }
+  public static void SetTotalNoOfProducts(int value) { TotalNoProducts = value; }
+  public static int GetTotalNoOfProducts() { return TotalNoProducts; }
 
 }
 

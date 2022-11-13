@@ -65,3 +65,20 @@ dotnet clean
 ---
 
 &nbsp;
+
+> **Michael:** Since the this keyword is optional in C# (unless like you say the parameter has the same name), what do most production quality code prefer?<br/>
+> Is there a style standard for C#?
+
+> **Web University:**
+>
+> **In constructors:**
+> Constructor parameters (with same name as field names) is recommended in real-world projects (to easily identify which parameter is for which field).
+>
+> **In methods:**
+> Accessing fields / properties from other places (from methods) would not require explicit usage of 'this' keyword - except in some rare cases you might have a local variable with same name.
+
+&nbsp;
+
+---
+
+&nbsp;

@@ -8,7 +8,9 @@ namespace _06_Methods
     {
       Product p1, p2;
       p1 = new Product();
+      Product.SetTotalNoOfProducts(Product.GetTotalNoOfProducts() + 1);
       p2 = new Product();
+      Product.SetTotalNoOfProducts(Product.GetTotalNoOfProducts() + 1);
 
       p1.SetProductID(1001);
       p1.SetCost(1000);
@@ -27,6 +29,8 @@ namespace _06_Methods
       Console.WriteLine("productID: " + p2.GetProductID());
       Console.WriteLine("cost: " + p2.GetCost());
       Console.WriteLine("CalculateTax: " + p2.GetTax());
+
+      Console.WriteLine("\nTotalNoProducts: " + Product.GetTotalNoOfProducts());
     }
   }
 }
