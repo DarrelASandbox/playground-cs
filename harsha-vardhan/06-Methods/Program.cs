@@ -10,19 +10,23 @@ namespace _06_Methods
       p1 = new Product();
       p2 = new Product();
 
-      p1.cost = 1000;
-      p2.cost = 30_000;
+      p1.SetProductID(1001);
+      p1.SetCost(1000);
+      p2.SetProductID(1002);
+      p2.SetCost(30_000);
 
       p1.CalculateTax();
       p2.CalculateTax();
 
       Console.WriteLine("-------------------- p1 --------------------:");
-      Console.WriteLine("cost: " + p1.cost);
-      Console.WriteLine("CalculateTax: " + p1.tax);
+      Console.WriteLine("productID: " + p1.GetProductID());
+      Console.WriteLine("cost: " + p1.GetCost());
+      Console.WriteLine("CalculateTax: " + p1.GetTax());
 
       Console.WriteLine("\n-------------------- p2 --------------------:");
-      Console.WriteLine("cost: " + p2.cost);
-      Console.WriteLine("CalculateTax: " + p2.tax);
+      Console.WriteLine("productID: " + p2.GetProductID());
+      Console.WriteLine("cost: " + p2.GetCost());
+      Console.WriteLine("CalculateTax: " + p2.GetTax());
     }
   }
 }
