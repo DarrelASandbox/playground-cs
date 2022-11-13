@@ -18,7 +18,11 @@ namespace _00_Assignments
       Console.ReadKey();
       Console.Clear();
 
-      ac.MultipleObjectsExample();
+      // ac.MultipleObjectsExample();
+      // Console.ReadKey();
+      // Console.Clear();
+
+      ac.NumberClass();
       Console.ReadKey();
       Console.Clear();
     }
