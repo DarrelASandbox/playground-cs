@@ -70,5 +70,10 @@
   public static void SetTotalNoOfProducts(int value) { TotalNoProducts = value; }
   public static int GetTotalNoOfProducts() { return TotalNoProducts; }
   public static int GetTotalQuantity(Product p1, Product p2) { return p1.GetQuantityInStock() + p2.GetQuantityInStock(); }
+
+  public void DisplayProducts(params string[] products)
+  {
+    for (int i = 0; i < products.Length; i++) { System.Console.WriteLine(products[i]); }
+  }
 }
 

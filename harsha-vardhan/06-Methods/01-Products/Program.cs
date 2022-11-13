@@ -64,6 +64,7 @@ namespace _06_Methods
       Console.WriteLine("productID: " + p1.GetProductID());
       Console.WriteLine("cost: " + p1.GetCost());
       Console.WriteLine("CalculateTax: " + p1.GetTax());
+      p1.DisplayProducts("TV, PS5, Vending Machine");
 
       Console.WriteLine("\n-------------------- p2 --------------------:");
       Console.WriteLine("productID: " + p2.GetProductID());
