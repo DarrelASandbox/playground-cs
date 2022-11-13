@@ -27,6 +27,7 @@
 
 ```sh
 dotnet new console --framework net5.0
+dotnet new classlib
 dotnet run
 # Mac ARM64 for .NET 5
 dotnetx64 run
