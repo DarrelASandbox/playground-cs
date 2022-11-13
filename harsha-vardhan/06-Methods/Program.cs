@@ -6,7 +6,7 @@ namespace _06_Methods
   {
     static void Main(string[] args)
     {
-      Product p1, p2, p3, p4, p5;
+      Product p1, p2, p3, p4, p5, p6, p7;
       p1 = new Product();
       Product.SetTotalNoOfProducts(Product.GetTotalNoOfProducts() + 1);
       p2 = new Product();
@@ -16,6 +16,10 @@ namespace _06_Methods
       p4 = new Product();
       Product.SetTotalNoOfProducts(Product.GetTotalNoOfProducts() + 1);
       p5 = new Product();
+      Product.SetTotalNoOfProducts(Product.GetTotalNoOfProducts() + 1);
+      p6 = new Product();
+      Product.SetTotalNoOfProducts(Product.GetTotalNoOfProducts() + 1);
+      p7 = new Product();
       Product.SetTotalNoOfProducts(Product.GetTotalNoOfProducts() + 1);
 
       p1.SetProductID(1001);
@@ -45,6 +49,17 @@ namespace _06_Methods
       p5.CalculateTaxPMRef(percentage: ref percentage2); // ref parameter modifier
       p5.SetQuantityInStock(4000);
 
+      p6.SetProductID(1006);
+      p6.SetCost(50_000);
+      p6.CalculateTaxPMOut(percentage: out double percentage3); // out parameter modifier
+      p6.SetQuantityInStock(4000);
+
+      double percentage4 = 4;
+      p7.SetProductID(1007);
+      p7.SetCost(50_000);
+      p7.CalculateTaxPMIn(percentage: in percentage4); // in parameter modifier
+      p7.SetQuantityInStock(4000);
+
       Console.WriteLine("-------------------- p1 --------------------:");
       Console.WriteLine("productID: " + p1.GetProductID());
       Console.WriteLine("cost: " + p1.GetCost());
@@ -63,15 +78,26 @@ namespace _06_Methods
       Console.WriteLine("\n-------------------- p4 --------------------:");
       Console.WriteLine("productID: " + p4.GetProductID());
       Console.WriteLine("cost: " + p4.GetCost());
-      Console.WriteLine("CalculateTaxPM: " + p4.GetTax());
+      Console.WriteLine("CalculateTaxPMDefault: " + p4.GetTax());
       Console.WriteLine("Unchanged @ 1% - percentage1: " + percentage1 + "%");
 
       Console.WriteLine("\n-------------------- p5 --------------------:");
       Console.WriteLine("productID: " + p5.GetProductID());
       Console.WriteLine("cost: " + p5.GetCost());
-      Console.WriteLine("CalculateTaxPM: " + p5.GetTax());
+      Console.WriteLine("CalculateTaxPMRef: " + p5.GetTax());
       Console.WriteLine("Changed from 2% to 5% - percentage2: " + percentage2 + "%");
 
+      Console.WriteLine("\n-------------------- p6 --------------------:");
+      Console.WriteLine("productID: " + p6.GetProductID());
+      Console.WriteLine("cost: " + p6.GetCost());
+      Console.WriteLine("CalculateTaxPMOut: " + p6.GetTax());
+      Console.WriteLine("Value taken from CalculateTaxPMOut() in Product.cs - percentage3: " + percentage3 + "%");
+
+      Console.WriteLine("\n-------------------- p7 --------------------:");
+      Console.WriteLine("productID: " + p7.GetProductID());
+      Console.WriteLine("cost: " + p7.GetCost());
+      Console.WriteLine("CalculateTaxPMIn: " + p7.GetTax());
+      Console.WriteLine("Value taken from CalculateTaxPMOut() in Program.cs - percentage4: " + percentage4 + "%");
 
       Console.WriteLine("\n--------------------------------------------:");
       Console.WriteLine("Total quantityInStock: " + Product.GetTotalQuantity(p1, p2));

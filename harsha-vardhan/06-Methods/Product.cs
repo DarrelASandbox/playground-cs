@@ -42,6 +42,23 @@
     tax = t;
   }
 
+  public void CalculateTaxPMOut(out double percentage)
+  {
+    percentage = 3;
+    double t;
+    if (cost <= 30000) t = cost * 20 / 100;
+    else t = cost * percentage / 100;
+    tax = t;
+  }
+
+  public void CalculateTaxPMIn(in double percentage)
+  {
+    double t;
+    if (cost <= 30000) t = cost * 20 / 100;
+    else t = cost * percentage / 100;
+    tax = t;
+  }
+
   public void SetProductID(int value) { productID = value; }
   public int GetProductID() { return productID; }
   public void SetCost(double value) { cost = value; }
